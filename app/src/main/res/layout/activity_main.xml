@@ -22,6 +22,10 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <!-- TODO (01) Add the dice images to the drawable folder -->
+
+    <!-- TODO (02) Remove the TextView and add the ImageView -->
+    <!-- Make it use dice_1 drawable -->
     <TextView
         android:id="@+id/result_text"
         android:layout_width="wrap_content"

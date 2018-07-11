@@ -36,8 +36,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun rollDice() {
         val randomInt = Random().nextInt(6) + 1
+        // TODO (04) Choose the right drawable resource based on the value of randomInt
+        // Tip: Use a when expression
 
+        // TODO (03) Get a reference to the imageView instead
         val resultText: TextView = findViewById(R.id.result_text)
+
+        // TODO (05) Make the ImageView show the chosen drawable resource
         resultText.text = randomInt.toString()
     }
 }
