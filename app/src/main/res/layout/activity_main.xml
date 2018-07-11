@@ -31,3 +31,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- TODO (01) Remove the code above and add the LinearLayout code from the classroom -->
+
+    <!-- TODO (02) Add the Button
+         Use "wrap_content" for its width and height
+         Use "center_horizontal" for the layout_gravity -->
+
+    <!-- TODO (03) Position the views
+         Remember to set the orientation of the LinearLayout to vertical
+         and use layout_gravity to align the elements so they are centered as expected -->
