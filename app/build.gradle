@@ -29,6 +29,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        // TODO (01) Enable support for vector drawables
     }
     buildTypes {
         release {
