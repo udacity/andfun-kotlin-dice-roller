@@ -22,8 +22,8 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <!-- TODO (01) add "result_text" as id of the TextView -->
     <TextView
+        android:id="@+id/result_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
