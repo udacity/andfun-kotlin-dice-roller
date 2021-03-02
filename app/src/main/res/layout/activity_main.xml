@@ -15,6 +15,7 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -22,17 +23,18 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <!-- TODO (01) Add the dice images to the drawable folder -->
+    <!-- TODO DONE (01) Add the dice images to the drawable folder -->
 
-    <!-- TODO (02) Remove the TextView and add the ImageView -->
+    <!-- TODO DONE (02) Remove the TextView and add the ImageView -->
     <!-- Make it use dice_1 drawable -->
-    <TextView
-        android:id="@+id/result_text"
+    <ImageView
+        android:contentDescription="@string/dice_image"
+        android:id="@+id/dice_image_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:textSize="30sp"
-        android:text="1" />
+        app:srcCompat="@drawable/dice_1" />
 
     <Button
         android:id="@+id/roll_button"
