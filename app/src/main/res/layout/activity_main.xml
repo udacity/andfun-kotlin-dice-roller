@@ -15,6 +15,7 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -22,14 +23,14 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <!-- TODO (02) Use app:srcCompat for the image; you'll need to add the namespace
+    <!-- TODO DONE (02) Use app:srcCompat for the image; you'll need to add the namespace
       xmlns:app="http://schemas.android.com/apk/res-auto" -->
     <ImageView
         android:id="@+id/dice_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/empty_dice" />
+        app:srcCompat="@drawable/empty_dice" />
 
     <Button
         android:id="@+id/roll_button"
