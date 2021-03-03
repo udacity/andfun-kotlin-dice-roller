@@ -44,15 +44,15 @@ class MainActivity : AppCompatActivity() {
         // TODO DONE (04) Choose the right drawable resource based on the value of randomInt
         // Tip: Use a when expression
         // TODO DONE (05) Make the ImageView show the chosen drawable resource
-        val randomInt = Random.nextInt(1, 7)
-        when (randomInt) {
-            1 -> diceImageView.setImageResource(R.drawable.dice_1)
-            2 -> diceImageView.setImageResource(R.drawable.dice_2)
-            3 -> diceImageView.setImageResource(R.drawable.dice_3)
-            4 -> diceImageView.setImageResource(R.drawable.dice_4)
-            5 -> diceImageView.setImageResource(R.drawable.dice_5)
-            else -> diceImageView.setImageResource(R.drawable.dice_6)
+        val diceImageResource = when (Random.nextInt(1, 7)) {
+            1 -> R.drawable.dice_1
+            2 -> R.drawable.dice_2
+            3 -> R.drawable.dice_3
+            4 -> R.drawable.dice_4
+            5 -> R.drawable.dice_5
+            else -> R.drawable.dice_6
         }
+        diceImageView.setImageResource(diceImageResource)
 
     }
 }
