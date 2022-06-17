@@ -11,8 +11,16 @@ Dice Roller is a simple app that rolls a six sided die.
 
 ![Screenshot1](screenshots/screen0.png) ![Screenshot1](screenshots/screen1.png)
 
-## How to use this repo while taking the course
 
+## How to use this repository
+- Fork this repository to your Github account.
+- Open Android Studio 3.2.x+ in your local machine.
+- We recommend you to use the [Version Control System](https://developer.android.com/studio/intro#version_control_basics)(VCS) in your Android Studio 3.2.x+ IDE to clone the repository directly in your IDE.
+- You may have to use the File > Settings > Version Control (VCS) menu option to set up Git settings.
+- Refer to this [IntelliJ document](https://www.jetbrains.com/help/idea/version-control-integration.html) for details.
+- Working with VCS will make it easy for you to push your updates or switch between branches to your remote repository in Github.
+
+## Repository details
 
 Each code repository in this class has a chain of commits that looks like this:
 
@@ -101,4 +109,4 @@ All of the code that was added in the solution is in green, and the removed code
 You can also compare your code locally with the branch of the following step.
 
 ## Report Issues
-Notice any issues with a repository? Please file a [github issue](https://github.com/udacity/andfun-kotlin-dice-roller/issues) in this repository.
+Notice any issues with a repository? Please use the https://knowledge.udacity.com/ platform to discuss individual issues with our experienced mentors or submit PRs to the current repo. 
