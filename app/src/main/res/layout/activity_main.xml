@@ -21,7 +21,19 @@
     android:layout_height="wrap_content"
     android:layout_gravity="center_vertical"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:id="@+id/linearLayout"
+    tools:context=".MainActivity"
+    >
+
+    <TextView
+        android:id="@+id/text_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="HELLO">
+
+    </TextView>
 
     <ImageView
         android:id="@+id/dice_image"
@@ -37,5 +49,23 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="@string/roll" />
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Reset" />
+
+    <Spinner
+        android:id="@+id/test_spinner"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center">
+<!--        tools:listitem="@tools:sample/cities"-->
+
+    </Spinner>
+
 
 </LinearLayout>
