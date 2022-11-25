@@ -21,13 +21,25 @@
     android:layout_height="wrap_content"
     android:layout_gravity="center_vertical"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:id="@+id/linearLayout"
+    tools:context=".MainActivity"
+    >
+
+    <TextView
+        android:id="@+id/text_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="HELLO">
+
+    </TextView>
 
     <ImageView
         android:id="@+id/dice_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:layout_gravity="center"
         app:srcCompat="@drawable/empty_dice"
         tools:srcCompat="@drawable/dice_1" />
 
@@ -37,5 +49,62 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="@string/roll" />
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Reset" />
+
+    <Spinner
+        android:id="@+id/test_spinner"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        >
+
+    </Spinner>
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:max="100"
+        android:min="0"
+        android:progress="3"
+        android:layout_marginTop="10dp"
+        >
+
+    </SeekBar>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
+    <TextView
+        android:id="@+id/text_one"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textSize="32sp"
+        
+        >
+    </TextView>
+        <TextView
+            android:id="@+id/text_two"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            >
+        </TextView>
+
+    </LinearLayout>
 
 </LinearLayout>
