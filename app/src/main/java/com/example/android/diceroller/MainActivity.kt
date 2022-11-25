@@ -25,19 +25,23 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
-class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
+class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener  {
 
     lateinit var diceImage: ImageView
     lateinit var textLabel: TextView
+    lateinit var text_one: TextView
+    lateinit var text_two: TextView
+    lateinit var seek: SeekBar
+
 
     var languages = arrayOf("Java", "PHP", "Kotlin", "Javascript", "Python", "Swift")
-    val NEW_SPINNER_ID = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setTheme(R.style.AppTheme_Fullscreen)
+//        setTheme(R.style.AppTheme_Fullscreen)
         setContentView(R.layout.activity_main)
+
 
         val rollButton: Button = findViewById(R.id.roll_button)
         rollButton.setOnClickListener {
@@ -51,8 +55,14 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
         diceImage = findViewById(R.id.dice_image)
         textLabel = findViewById(R.id.text_label)
+        text_one = findViewById(R.id.text_one)
+        text_two = findViewById(R.id.text_two)
+
+        text_one.text = "You're gay for "
+        text_two.text = "0%"
 
         fillSpinner()
+        useSeekBar()
 
     }
 
@@ -75,6 +85,9 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
         diceImage.setImageResource(R.drawable.empty_dice)
         textLabel.setText("HELLO")
+        seek.progress = 0
+        text_two.text = "0%"
+
     }
 
     fun fillSpinner() {
@@ -105,6 +118,7 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 showToast(message = "language: ${languages[position]}")
+
     }
 
     override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -112,5 +126,36 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     }
     private fun showToast(context: Context = applicationContext, message: String, duration: Int = Toast.LENGTH_SHORT) {
         Toast.makeText(context, message, duration).show()
+    }
+
+
+    fun useSeekBar() {
+        seek = findViewById(R.id.seekbar)
+
+        seek?.setOnSeekBarChangeListener(object :
+            SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(
+                seek: SeekBar,
+                progress: Int, fromUser: Boolean
+            ) {
+                // write custom code for progress is changed
+            }
+
+            override fun onStartTrackingTouch(seek: SeekBar) {
+                // write custom code for progress is started
+            }
+
+            override fun onStopTrackingTouch(seek: SeekBar) {
+                // write custom code for progress is stopped
+//                Toast.makeText(
+//                    this@MainActivity,
+//                    "Progress is: " + seek.progress + "%",
+//                    Toast.LENGTH_SHORT
+//                ).show()
+                text_two.text = "${seek.progress}%"
+
+            }
+
+        })
     }
 }
